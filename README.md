@@ -4,12 +4,6 @@
 
 A sleek and customizable password generator built with React, Vite, and Tailwind CSS. Generate strong, secure passwords with optional settings for length, numbers, and special characters, ensuring the utmost security for your accounts.
 
----
-
-
-
----
-
 ## Features
 
 - **Customizable Password Length**: Choose password lengths from 8 to 32 characters.
@@ -92,7 +86,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Author
 
-Developed by [Mohit Kumar](https://github.com/your-username)
+Developed by [Mohit Kumar](https://github.com/Mohitkumar49)
 ```
-
-Just replace `your-username` with your GitHub username and add the path for your screenshot image. Let me know if you want any further tweaks!
