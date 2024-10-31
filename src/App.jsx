@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import Toast from './Toast.jsx';
 
 function App() {
@@ -9,6 +9,9 @@ function App() {
 
 
   const [showToast, setShowToast] = useState(false);
+
+
+  // const passwordRef = useRef(null);
 
   const generatePassword = useCallback(() => {
     let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -23,7 +26,9 @@ function App() {
   }, [length, includeNumbers, includeSpecial]);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(password);
+    // passwordref.current?.select();
+    //passwordRef.current?.setSelectionRange(0,4) //for particular area
+    window.navigator.clipboard.writeText(password);
     // alert('Password copied to clipboard!');
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
@@ -83,6 +88,7 @@ function App() {
             value={password}
             readOnly
             className="flex-1 px-3 py-2 bg-gray-700 border border-gray-900 rounded-md text-green-300 font-mono text-lg"
+            // ref={passwordRef}
           />
           {password && (
             <button
